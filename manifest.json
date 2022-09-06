@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://cn.id.autox.tech/editor/*","https://www.baidu.com/*"],
+      "matches": ["https://cn.id.autox.tech/editor/*","https://szexa.xray.autox.tech/*"],
       "js": ["default.js"],
       "css": ["default.css"],
       "run_at": "document_end"
