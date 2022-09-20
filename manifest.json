@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name":"ID plus plus",
+  "version": "1.0.2.12",
+  "description": "ID++",
+  "icons": {
+    "128": "img/icon128.png",
+    "48": "img/icon48.png",
+    "16": "img/icon16.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "img/icon48.png",
+    "default_title": "ID++",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://cn.id.autox.tech/editor/*","https://szexa.xray.autox.tech/*","https://ps.xray.autox.tech/*"],
+      "js": ["default.js"],
+      "css": ["default.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
