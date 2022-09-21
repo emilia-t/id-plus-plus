@@ -1,0 +1,87 @@
+.IdPlusPlusHistoryBox{
+  max-width: 800px;
+  width: 52%;
+  height: 44px;
+  position: fixed;
+  top: 70px;
+  left: calc(40%);
+  background: #dcdcdc;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding:2px;
+}
+.IdPlusPlusPersistenceId{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  top:calc(100% - 60px);
+  left: calc(100% - 500px);
+  z-index: 99999;
+  font-size: 18px;
+  color: white;
+  background: rgba(69, 64, 64, 0.44);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+.IdPlusPlusHistoryBox::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 8px;
+}
+.IdPlusPlusHistoryBox::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #535353;
+}
+.IdPlusPlusHistoryBox::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background   : #ededed;
+}
+.IdPlusPlusMaskBox{user-select: none;-ms-user-select: none;-webkit-user-select: none;overflow: hidden;min-width: calc(100% - 400px);width: calc(100% - (100% / 3));height: calc(100% - 60px);background: rgba(194, 194, 194, 0.4);z-index: 9999999;position: fixed;top: 60px;left: calc(400px);display: block}
+.IdPlusPlusMaskControl{display: flex;justify-content:space-around;flex-direction: column;align-items: center;width: 60px;height: 300px;position: fixed;left: 340px;top: 200px;background: rgba(229, 229, 229, 0.85);z-index: 9999999;border-radius: 8px}
+.IdPlusPlusMaskImg{user-select: none;-ms-user-select: none;-webkit-user-select: none;top:60px;left:400px;position: fixed;transform: rotate(0deg)}
+.IdPlusPlusProjection{width: 100%;height: 100%;z-index: 9999999;display: block}
+.IdPlusPlusProjectionPoint{width: 6px;height: 6px;border-radius: 6px;z-index: 9999999;position: fixed;}
+.IdPlusPlusProjectionControl{transition: 1s;box-shadow: 0 0 2px #888;border-radius: 8px;display: flex;flex-direction: row;justify-content: space-around;align-items: center;width: 320px;height: 50px;position: fixed;z-index:calc(9999999 + 10);top:65px;left: calc(50% - 100px);background: rgba(248, 248, 248, 0.75)}
+.IdPlusPlusProjectionControlHide{top:-49px}
+.IdPlusPlusProjectionControlBtn{transition: .4s;display: flex;justify-content: center;align-items: center;line-height: 16px;font-size: 16px;width: 55px;height: 30px;border-radius: 6px;box-shadow: 2px 2px 5px #999}
+.IdPlusPlusProjectionAnimation001{animation: IdPlusPlusProjectionControlBtnA 0.3s forwards}
+.IdPlusPlusProjectionAnimation002{animation: IdPlusPlusProjectionControlBtnB 0.3s forwards}
+.IdPlusPlusProjectionControlBtn:hover{background: #7aaeff}
+.IdPlusPlusProjectionControlColor{width: 80px; height:50px;flex-wrap: wrap;padding: 2px;display: flex;flex-direction: column;justify-content: center;align-items: center}
+.IdPlusPlusProjectionControlColorBtn{transition: 0.3s;width: 10px;height: 10px;margin: 5px}
+.IdPlusPlusProjectionControlColorBtn:nth-child(1){background: #ff0000}
+.IdPlusPlusProjectionControlColorBtn:nth-child(2){background: #ffd05b}
+.IdPlusPlusProjectionControlColorBtn:nth-child(3){background: #c6ff5b}
+.IdPlusPlusProjectionControlColorBtn:nth-child(4){background: #5bffaa}
+.IdPlusPlusProjectionControlColorBtn:nth-child(5){background: #5bcbff}
+.IdPlusPlusProjectionControlColorBtn:nth-child(6){background: #5b6bff}
+.IdPlusPlusProjectionControlColorBtn:nth-child(7){background: #fa5bff}
+.IdPlusPlusProjectionControlColorBtn:nth-child(8){background: #ff5b89}
+.IdPlusPlusSyncSketchpad{width: 100%;height: 100%;background: rgba(236, 236, 236, 0.1);position: fixed;top:0px;left:0px;display: block}
+/*选中效果*/
+.IdPlusPlusProjectionControlColorBtnA{box-shadow: 2px 2px 2px #9a9a9a}
+/*点击-开启动画*/
+@keyframes IdPlusPlusProjectionControlBtnA {
+  0%{box-shadow: 2px 2px 5px #999}
+  50%{box-shadow: 1px 1px 1px #bde1ff}
+  100%{box-shadow: 2px 2px 5px #999}
+}
+/*点击-关闭动画*/
+@keyframes IdPlusPlusProjectionControlBtnB {
+  0%{box-shadow: 2px 2px 5px #999}
+  50%{box-shadow: 1px 1px 1px #585555}
+  100%{box-shadow: 2px 2px 5px #999}
+}
